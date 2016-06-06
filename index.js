@@ -174,8 +174,8 @@ class Drawer extends Component {
       mainProps = Object.assign(mainProps, propsFrag.main)
       drawerProps = Object.assign(drawerProps, propsFrag.drawer)
     }
-    this.drawer.setNativeProps({style: drawerProps})
-    this.main.setNativeProps({style: mainProps})
+    this.drawer && this.drawer.setNativeProps({style: drawerProps})
+    this.main && this.main.setNativeProps({style: mainProps})
   }
 
   shouldOpenDrawer(dx) {
